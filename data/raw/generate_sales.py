@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 import csv
 import random
 from datetime import date, timedelta
@@ -7,11 +5,11 @@ from decimal import Decimal
 from pathlib import Path
 
 SEED = 42
-TOTAL_ROWS = 10_000
-VALID_ROWS = 9_500
+TOTAL_ROWS = 10000
+VALID_ROWS = 9500
 START_DATE = date(2026, 1, 1)
 END_DATE = date(2026, 6, 30)
-OUTPUT = Path(__file__).resolve().parents[1] / "data" / "raw" / "sales.csv"
+OUTPUT = Path(__name__).resolve().parents[0] / "data" / "raw" / "sales.csv"
 
 FIELDS = [
     "order_id",
