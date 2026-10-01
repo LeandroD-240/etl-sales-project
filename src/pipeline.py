@@ -22,7 +22,6 @@ class PipelineResult:
     staging_rows: int | None
     inserted_rows: int | None
     core_total_rows: int | None
-    # load_executed: bool
 
 
 LOGGER = logging.getLogger("sales_pipeline")
@@ -51,10 +50,6 @@ def run_pipeline(root: str | Path) -> PipelineResult:
     The normal production path is:
 
         raw CSV -> ingestion -> validation/quarantine -> transformation -> load
-
-    ``load_to_database=False`` is a development/testing mode that executes all
-    file-based ETL stages but deliberately stops before PostgreSQL. No prompt
-    or manual decision is required in either mode.
     """
     _configure_logging()
 
@@ -178,6 +173,5 @@ def run_pipeline(root: str | Path) -> PipelineResult:
         transformed_rows=len(transformed_df),
         staging_rows=staging_rows,
         inserted_rows=inserted_rows,
-        core_total_rows=core_total_rows,
-        # load_executed=load_to_database,
+        core_total_rows=core_total_rows
     )

@@ -1,4 +1,3 @@
-# import argparse
 import sys
 from pathlib import Path
 
@@ -9,29 +8,9 @@ if str(ROOT) not in sys.path:
 from src.pipeline import run_pipeline
 
 
-# def parse_args() -> argparse.Namespace:
-#     parser = argparse.ArgumentParser(
-#         description="Run the complete sales ETL pipeline."
-#     )
-#     parser.add_argument(
-#         "--skip-load",
-#         action="store_true",
-#         help=(
-#             "Run ingestion, validation and transformation without PostgreSQL. "
-#             "Development/testing mode only."
-#         ),
-#     )
-#     return parser.parse_args()
-
-
 def main() -> int:
-    # args = parse_args()
-
     try:
-        result = run_pipeline(
-            ROOT
-            # load_to_database=not args.skip_load,
-        )
+        result = run_pipeline(ROOT)
     except Exception as exc:
         print(f"PIPELINE FAILED: {exc}")
         return 1
