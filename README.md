@@ -1,5 +1,19 @@
 # Sales Data Pipeline
 
+![Status](https://img.shields.io/badge/Status-Finished-BEEF9E?style=flat-square)
+![License](https://img.shields.io/badge/License-MIT-A188A6?style=flat-square)
+![Python](https://img.shields.io/badge/Python-v3.11-01386A?style=flat-square&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-v3.0.6-6f42c1?style=flat&logo=pandas&logoColor=white)
+![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-2.1.1-D71F00?logo=sqlalchemy&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-18-4169E1?logo=postgresql&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-Containerized-2496ED?logo=docker&logoColor=white)
+![PostgreSQL Docker Image](https://img.shields.io/docker/v/library/postgres/18.6?sort=semver&logo=docker&logoColor=white)
+![pytest](https://img.shields.io/badge/pytest-9.1.1-0A9EDC?logo=pytest&logoColor=white)
+
+---
+
+## Description
+
 A **data engineering** mini-project designed to practice, in a simple and reproducible way, the fundamentals of an ETL pipeline.
 
 The project simulates a retail scenario in which a company receives a sales CSV file. The data goes through ingestion, validation, cleaning, transformation, and loading before becoming available in PostgreSQL.
@@ -615,3 +629,9 @@ Most importantly, you should be able to explain what responsibility each stage h
 ## Note
 
 This is a practice project.
+
+---
+
+## License
+
+This project is licensed under the **MIT License** — see the [`LICENSE`](LICENSE) file for details.
